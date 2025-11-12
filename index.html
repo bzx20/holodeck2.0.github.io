@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="HOLODECK 2.0: Vision-Language-Guided 3D World Generation with Editing">
+  <meta name="keywords" content="HOLODECK, 3D Generation, Vision-Language Models">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HOLODECK 2.0: Vision-Language-Guided 3D World Generation with Editing</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  
+  <style>
+    body {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .publication-title {
+      font-family: 'Google Sans', sans-serif;
+    }
+    .publication-authors {
+      font-family: 'Google Sans', sans-serif;
+    }
+    .button {
+      font-family: 'Noto Sans', sans-serif;
+    }
+    .dnerf {
+      font-variant: small-caps;
+    }
+  </style>
+</head>
+<body>
+
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container is-max-desktop">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title">HOLODECK 2.0: Vision-Language-Guided 3D World Generation with Editing</h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://scholar.google.com/citations?user=yYZNhasAAAAJ">Zixuan Bian</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://renruohan.github.io/ruohan_ren.github.io/">Ruohan Ren</a><sup>2</sup>,</span>
+            <span class="author-block">
+              <a href="https://yueyang1996.github.io/">Yue Yang</a><sup>1</sup>,</span>
+            <span class="author-block">
+              <a href="https://www.cis.upenn.edu/~ccb/">Chris Callison-Burch</a><sup>1</sup></span>
+          </div>
+
+          <div class="is-size-5 publication-authors">
+            <span class="author-block"><sup>1</sup>University of Pennsylvania, </span>
+            <span class="author-block"><sup>2</sup>Cornell University</span>
+          </div>
+
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link -->
+              <span class="link-block">
+                <a href="assets/paper.pdf" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <span class="link-block">
+                <a href="https://arxiv.org/abs/2508.05899" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link -->
+              <span class="link-block">
+                <a href="#video" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                    <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                    <i class="fab fa-github"></i>
+                  </span>
+                  <span>Code (Coming Soon)</span>
+                </a>
+              </span>
+              <!-- Dataset Link -->
+              <span class="link-block">
+                <a href="#" class="external-link button is-normal is-rounded is-dark" disabled>
+                  <span class="icon">
+                    <i class="far fa-images"></i>
+                  </span>
+                  <span>Demo (Coming Soon)</span>
+                </a>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="container is-max-desktop">
+    <div class="hero-body">
+      <img src="static/images/teaser.png" alt="HOLODECK 2.0 Teaser" style="width:100%; border-radius:10px;">
+      <h2 class="subtitle has-text-centered">
+        <span class="dnerf">HOLODECK 2.0</span> generates editable, style-consistent 3D worlds from text or images.
+      </h2>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <!-- Abstract -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            3D scene generation plays a crucial role in gaming, artistic creation, virtual reality and many other domains. However, current 3D scene design still relies heavily on extensive manual effort from creators, and existing automated methods struggle to generate open-domain scenes or support flexible editing.
+          </p>
+          <p>
+            As a result, generating 3D worlds directly from text has garnered increasing attention. In this paper, we introduce <strong>HOLODECK 2.0</strong>, an advanced vision-language-guided framework for 3D world generation with support for interactive scene editing based on human feedback.
+          </p>
+          <p>
+            HOLODECK 2.0 can generate diverse and stylistically rich 3D scenes (e.g., realistic, cartoon, anime, and cyberpunk styles) that exhibit high semantic fidelity to fine-grained input descriptions, suitable for both indoor and open-domain environments. It leverages vision-language models to identify and parse the required objects and uses state-of-the-art 3D generative models to create high-quality assets, then iteratively applies spatial constraints to achieve semantically coherent and physically plausible layouts.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Method -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Method Overview</h2>
+        <div class="content has-text-justified">
+          <p><strong>Highlights:</strong></p>
+          <ul>
+            <li>Training-free pipeline built around VLMs + 3D generative assets</li>
+            <li>Consistent artistic styles across indoor and open-domain scenes</li>
+            <li>Iterative spatial constraints + DFS solver for coherent, collision-free layouts</li>
+            <li>Interactive editing at layout and asset levels</li>
+          </ul>
+        </div>
+        <div style="background:#f5f5f5; padding:60px; border-radius:10px; margin-top:20px;">
+          <p style="color:#999; font-style:italic;">(Method figure coming soon)</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Video -->
+    <div class="columns is-centered has-text-centered" id="video">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3">Video</h2>
+        <div style="background:#f5f5f5; padding:100px 60px; border-radius:10px;">
+          <p style="color:#999; font-style:italic;">(Video coming soon)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Results</h2>
+        <div style="background:#f5f5f5; padding:60px; border-radius:10px; text-align:center;">
+          <p style="color:#999; font-style:italic;">(Results gallery coming soon)</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="BibTeX">
+  <div class="container is-max-desktop content">
+    <h2 class="title">BibTeX</h2>
+
+    <div class="code-copy-wrap" style="position: relative;">
+      <button id="copyBibtexBtn" class="button is-small is-light"
+              style="position: absolute; top: 8px; right: 8px; z-index: 2; opacity: 0.9;">
+        <span class="icon"><i class="fas fa-copy"></i></span>
+        <span>Copy</span>
+      </button>
+      <pre style="padding-top: 2.2em; margin-top: 0;">
+        <code id="bibtexCode">
+@misc{bian2025holodeck20visionlanguageguided3d,
+  title={HOLODECK 2.0: Vision-Language-Guided 3D World Generation with Editing}, 
+  author={Zixuan Bian and Ruohan Ren and Yue Yang and Chris Callison-Burch},
+  year={2025},
+  eprint={2508.05899},
+  archivePrefix={arXiv},
+  primaryClass={cs.CV},
+  url={https://arxiv.org/abs/2508.05899}, 
+}</code>
+      </pre>
+    </div>
+  </div>
+
+  <script>
+    (function() {
+      const btn = document.getElementById("copyBibtexBtn");
+      const codeEl = document.getElementById("bibtexCode");
+      if (btn && codeEl) {
+        btn.addEventListener("click", () => {
+          const text = codeEl.innerText;
+          navigator.clipboard.writeText(text).then(() => {
+            btn.classList.add("is-success");
+            btn.innerHTML = '<span class="icon"><i class="fas fa-check"></i></span><span>Copied!</span>';
+            setTimeout(() => {
+              btn.classList.remove("is-success");
+              btn.innerHTML = '<span class="icon"><i class="fas fa-copy"></i></span><span>Copy</span>';
+            }, 1500);
+          });
+        });
+      }
+    })();
+  </script>
+</section>
+
+
+
+<section class="section">
+  <div class="container is-max-desktop content">
+    <h2 class="title">Acknowledgements</h2>
+    <p>We thank collaborators and supporters.</p>
+  </div>
+</section>
+
+<footer class="footer">
+    <div class="columns is-centered">
+      <div class="column is-8">
+        <div class="content has-text-centered">
+          <p>© 2025 University of Pennsylvania</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
